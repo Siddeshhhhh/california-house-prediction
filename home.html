@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+  <meta charset="UTF-8">
+  
+  
+</head>
+
+<body>
+ <div class="login">
+	<h1> California Price Prediction</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+      <input type="text" name="MED INC  " placeholder="MED INC" required="required" /><br>
+    	<input type="text" name="HouseAge" placeholder="HouseAge" required="required" /><br>
+        <input type="text" name="AVEROOMS" placeholder="AVEROOMS" required="required" /><br>
+        <input type="text" name="AVEBEDROOMS" placeholder="AVEBEDROOMS" required="required" /><br>
+        <input type="text" name="Population" placeholder="Population" required="required" /><br>
+        <input type="text" name="AveOccup" placeholder="AveOccup" required="required" /><br>
+        <input type="text" name="Latitude" placeholder="Latitude" required="required" /><br>
+        <input type="text" name="Longtitude" placeholder="Longtitude" required="required" /><br>
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+  
+   
+ </div>
+ {{prediction_text}}
+
+</body>
+</html>
